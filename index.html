@@ -1,318 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
-    <!-- Other meta tags -->
-    <link rel="stylesheet" href="https://kit.fontawesome.com/15e3e040a7.css" crossorigin="anonymous">
-  
-  
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <title>Sajad yoosuf</title>
-  <link rel="icon" type="image/x-icon" href=https://media.licdn.com/dms/image/D4E35AQFZqAmyRDDkKw/profile-framedphoto-shrink_200_200/0/1680599330173?e=1718877600&v=beta&t=GbaIHtQC2nkZkEXKdZy10caSb3XLFTUvIXeZFFv31B8>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sajad Yoosuf | Future AI Engineer & Flutter Developer</title>
+    <meta name="description" content="Portfolio of Sajad Yoosuf - Software Developer focused on Flutter & AI, building impactful technology for society.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/15e3e040a7.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="https://media.licdn.com/dms/image/D4E35AQFZqAmyRDDkKw/profile-framedphoto-shrink_200_200/0/1680599330173?e=1718877600&v=beta&t=GbaIHtQC2nkZkEXKdZy10caSb3XLFTUvIXeZFFv31B8">
 </head>
 <body>
-  <header class="bg-primary">
-    <div class="row text-white">
-      <div class="col-md-6 col-9 p-4 pl-5">
-        <h2>Sajad Yoosuf</h2>
-      </div>
-      <div class="col-md-6 col-3 my-auto">
-        <nav class="navbar navbar-expand-lg navbar-light">
-          <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link active text-white" href="#home">Home<span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active text-white" href="#Enthusiasm">Enthusiasm</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active text-white" href="#Experience">Experience</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active text-white" href="#Vision">Vision</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active text-white" href="#Career">Career</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active text-white" href="#Contact me">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-    </div>
-  </header>
 
-  <section class="p-4">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-6">
-        <img class="col-md-6 rounded-circle" src="gdg.jpg">
-        </div>
-        <div class="col-md-6 ">
-          <h4>"Passionate Futurist , Aspiring Tech Entrepreneur <br>
-             Exploring the Intersection of Technology, Society, and Economy , Future-Forward Visionary"</h4>
-             <blockquote class="blockquote">
-          <p>"the morning is  best moment for thinking exisiting future"</p>
-          <footer>Sajad</footer>
-          </blockquote>
-        
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="bg-light p-4">
-    <div class="container">
-      <h1 class="text-center" id="Enthusiasm" >Enthusiasm</h1>
-      <div class="row " >
-        <div class="col-md-4 ">
-          
-       <div class="card text-center p-1">
-            <img class="mx-auto" src="univers.jpg">
-              <div class="card-body">
-              <h3 class="card-title">UNIVERS</h3>
-                <h5>Welcome to the Universe<br> A Journey Beyond the Stars</h5>
-              </div>
+    <!-- Canvas for Particle Background -->
+    <canvas id="bgCanvas"></canvas>
+
+    <!-- Header / Command Center -->
+    <header id="header">
+        <div class="container nav-container">
+            <div class="logo">
+                SAJAD<span>.DEV</span>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card text-center p-1" >
-                 <img src="AI.jpg" >
-                   <div class="card-body">
-                   <h3 class="card-title">ARTIFICIAL INTELLIGENCE</h3>
-                   <h5>Welcome to the AI Revolution <br> Embrace the Future!</h5>  
-                   </div>
-                 </div>
-               </div>
-               <div class="col-md-4">
-                <div class="card text-center p-1">
-                  <img src="TECHNOLOGY.jpg" >
-                       <div class="card-body">
-                       <h3 class="card-title">TECHNOLOGY</h3>
-                         <h5>Embracing Tomorrow's Technological Wonders <br> A New Era</h5>
-                       </div>
-                     </div>
-                   </div>
-                   </div>
-                   <div class="row pt-3">
-                   <div class="col-md-4">
-                    <div class="card text-center p-1" >
-                         <img src="Aliens.jpg" >
-                           <div class="card-body">
-                           <h3 class="card-title">ALIENS</h3>
-                             <h5>Alien Encounter <br> Bridging Interstellar Connections, Transforming Perspectives</h5>
-                           </div>
-                         </div>
-                       </div>
-                       <div class="col-md-4">
-                        <div class="card text-center p-1" >
-                             <img src="FUTUER OF HUMANITY.jpg" >
-                               <div class="card-body">
-                               <h3 class="card-title">FUTURE OF HUMANITY</h3>
-                                 <h5>Humanity's Tomorrow: Boundless Potential, Technological Marvels Await</h5>
-                               </div>
-                             </div>
-                           </div>
-                           <div class="col-md-4">
-                            <div class="card text-center p-1" >
-                                 <img src="enterpunuership.jpg" >
-                                   <div class="card-body">
-                                   <h3 class="card-title">ENTERPUNERSHIP</h3>
-                                    <h5>Entrepreneurial Frontier: Embrace Challenges, Unleash Innovative Brilliance</h5>
-                                   </div>
-                                 </div>
-                           </div>
-                          </div>
-                          <div class="row pt-3 ">
-                            <div class="col-md-4 mx-auto">
-                             <div class="card text-center p-1" >
-                                  <img src="PROGRAMMING.jpg" >
-                                    <div class="card-body">
-                                    <h3 class="card-title">PROGRAMMING</h3>
-                                      <h5>Programming: Unlocking Digital Realms, Shaping Tomorrow's World</h5>
-                                    </div>
-                                  </div>
-                                </div>
-                                
-                                   </div>
-                          </div>
-                         </section>
-                         <section class="bg-white p-4">
-                          <div class="container">
-                            <h1 class="text-center " id="Experience">Experience</h1>
-                            <div class="row">
-                              <div class="col-md-4 mx-auto">
-                                <a class="text-secondary" href="https://www.nexstay.co/"style="text-decoration: none;">
-                                <div class="card text-center p-1" >
-                                    <img  class="w-50 h-50 mx-auto"  src="https://www.nexstay.co/images/nexstay.png"  alt="">
-                                       <div class="card-body">
-                                       <h4 class="card-title">Nexstay Grand Chaliyar</h4>
-                                       
-                                       <h4 class="mx-auto">2023</h4>
-                                       </div>
-                                     </div>
-                                     </a>
-                               </div>
-                               <div class="col-md-4 mx-auto">
-                                <a class="text-secondary" href="https://www.nexstay.co/"style="text-decoration: none;">
-                                <div class="card text-center p-1">
-                                  <img class="w-50 h-50 mx-auto"  src="https://www.nexstay.co/images/nexstay.png" alt="">
-                                       <div class="card-body">
-                                       <h4 class="card-title">Nexstay lakkidi village</h4>
-                                        
-                                         <h4 class="mx-auto">2024</h4>
-                                       </div>
-                                     </div>
-                                     </a>
-                               </div>
-                              
-                               </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">Profile</a></li>
+                    <li><a href="#skills" class="nav-link">Arsenal</a></li>
+                    <li><a href="#projects" class="nav-link">Missions</a></li>
+                    <li><a href="#vision" class="nav-link">Vision</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-                            </div>
-                          </div>
-                         </section>
-                         <section class="bg-light p-5">
-                          <div class="container ">
-                            <h1 class="text-center" id="Vision">Vision</h1>
-                            <div class="row">
-                              <div class="col-md-4">
-                                
-                                <div class="card text-center p-1" >
-                                    <img src="EXPLORING UNIVERS.jpg"  alt="">
-                                       <div class="card-body">
-                                       <h3 class="card-title">EXPLORING UNIVERS</h3>
-                                       <h5 class="card-text">Cosmic Exploration: Unveiling Galactic Wonders, Unlocking Universe's Secrets</h5>
-                                       </div>
-                                     </div>
-                                     </a>
-                               </div>
-                               <div class="col-md-4">
-                                
-                                <div class="card text-center p-1">
-                                  <img src="FUTURUSTIC STARTUPS.jpg" alt="">
-                                       <div class="card-body">
-                                       <h3 class="card-title">FUTURUSTIC STARTUPS</h3>
-                                         <h5 class="card-text">Startup Visionaries: Envisioning, Disrupting, Redefining the Future</h5>
-                                       </div>
-                                     </div>
-                                     </a>
-                               </div>
-                               <div class="col-md-4">
-                                <div class="card text-center p-1" >
-                                  <img class="w-50 h-50 mx-auto"  src="HUMANITARIAN.jpg" alt="">
-                                       <div class="card-body">
-                                       <h3 class="card-title">HUMANITARIAN PROJECT</h3>
-                                         <h5 class="card-text">Humanitarian Efforts: Opensource Solutions, Uplifting Communities, Transforming Lives</h5>
-                                       </div>
-                                     </div>
-                               </div>
+    <!-- Hero Section / The Portal -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="role-badge">SYSTEM STATUS: ONLINE</div>
+            <h1 class="neon-text">BUILDING FLUTTER APPS TODAY<br><span style="color:var(--secondary); font-size: 0.7em;">CREATING AI SOLUTIONS FOR TOMORROW</span></h1>
+            <p class="tagline">
+                Flutter Developer | Future AI Engineer
+                <br>Building modern apps and AI solutions that improve lives.
+            </p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn-cyber">VIEW MISSIONS</a>
+                <a href="#contact" class="btn-cyber" style="border-color: var(--secondary); margin-left: 20px;">INITIATE CONTACT</a>
+            </div>
+        </div>
+    </section>
 
-                            </div>
-                          </div>
-                         </section>
-                         <section class="bg-white p-5">
-                          <div class="container">
-                            <h1 class="text-center" id="Career">Career</h1>
-                            <div class="row">
-                              <div class="col-md-4 mx-auto">
-                                <a class="text-secondary" href="https://cep.ac.in/"style="text-decoration: none;">
-                                <div class="card text-center p-1" >
-                                    <img class="w-50 h-50 mx-auto"  src="poonjar engineering college.jpg"  alt="">
-                                       <div class="card-body">
-                                       <h3 class="card-title">DIPLOMA </h3>
-                                       <h4 class="card-text">EEE </h4>
-                                      
-                                       </div>
-                                     </div>
-                                </a>
-                                     
-                               </div>
-                               
-                               
-
-                            </div>
-                          </div>
-                        </section>
-                        <section>
-                          <div class="container">
-                            <h1 class="text-center">Onnline learnings</h1>
-                            <div class="row">
-                              <div class="col-md-4">
-                                <a class="text-secondary" href="https://edapt.me/"style="text-decoration: none;">
-                                <div class="card text-center p-1" >
-                                    <img class="w-50 h-50 mx-auto"  src="edapt.jpg"  alt="">
-                                       <div class="card-body">
-                                       <h3 class="card-title">EDAPT</h3>
-                                       <h4 class="card-text">FUTURE TECHNOLOGY</h4>
-                                       <h5 class="mx-auto">SHORT TERM COURSES</h5>
-                                      
-                                       </div>
-                                     </div>
-                                </a>
-                              </div>
-                                     
-                                     <div class="col-md-4">
-                                      <a class="text-secondary" href="https://pll.harvard.edu/catalog/free"style="text-decoration: none;">
-                                      <div class="card text-center p-1" >
-                                          <img class="w-50 h-50 mx-auto"  src="harward.jpg"  alt="">
-                                             <div class="card-body">
-                                             <h3 class="card-title">HARVARD</h3>
-                                             <h4 class="card-text">COMPUTER SIENCE</h4>
-                                             <h5 class="mx-auto">INTRO CS&PROGRAMMING </h5>
-                                             </div>
-                                           </div>
-                                          </a>
-                                     </div>
-                                           
-                                           <div class="col-md-4">
-                                            <a class="text-secondary" href="https://elearning.iirs.gov.in/"style="text-decoration: none;">
-                                            <div class="card text-center p-1" >
-                                                <img class="w-50 h-50 mx-auto"  src="isro.jpg"  alt="">
-                                                   <div class="card-body">
-                                                   <h3 class="card-title">ISRO</h3>
-                                                   <h4 class="card-text">SPACE&TECHNOLOGY</h4>
-                                                   <h5 class="mx-auto">INTRODUCTION ABOUT SPACE SIENCE AND APPLICATIONS</h5>
-                                                   </div>
-                                                 </div>
-                                                </a>
-                                                 </div>
-                          </div>
-                          
-                          </div>
-                         </section>
-                         
-                       
-                         <footer class="bg-info">
-                          <div class="container">
-                            <div class="row">
-                              <div class="col-md-12 text-center text-white">
-                                <p>Copyrights</p>
-                                <p>
-                                  <a href="https://www.linkedin.com/in/sajad-yoosuf-a82616319/" target="_blank" class="text-white mx-2">
-                                    <i class="fab fa-linkedin fa-lg"></i> LinkedIn
-                                  </a>
-                                  <a href="https://github.com/SajadYoosuf" target="_blank" class="text-white mx-2">
-                                    <i class="fab fa-github fa-lg"></i> GitHub
-                                  </a>
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </footer>
+    <!-- About Section / Player Profile -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">PLAYER PROFILE</h2>
+            <div class="glass-panel" style="padding: 40px; margin-top: 40px;">
+                <div class="about-grid">
+                    <div class="profile-image">
+                        <!-- Reusing existing image, but styled -->
+                        <div class="profile-card">
+                            <img src="gdg.jpg" alt="Sajad Yoosuf at GDG Event">
+                        </div>
+                    </div>
+                    <div class="profile-text">
+                        <h3 style="color: var(--primary);">SAJAD YOOSUF</h3>
+                        <h5 style="color: var(--text-muted); margin-bottom: 20px; font-family: var(--font-code);">CLASS: TECH INNOVATOR</h5>
+                        <p>
+                            I am a software developer specializing in Flutter, building high-quality mobile and web applications. 
+                            Alongside app development, I am actively learning Artificial Intelligence to create intelligent systems that solve real-world societal problems.
+                        </p>
+                        <br>
+                        <p>
+                            My goal is to combine modern software engineering with AI innovation to build impactful, meaningful technology for healthcare, education, and community well-being.
+                        </p>
                         
-                         
+                        <div class="profile-stats">
+                            <div>
+                                <i class="fas fa-code-branch"></i> 20+ Repos
+                            </div>
+                            <div>
+                                <i class="fas fa-check-circle"></i> 10+ Projects
+                            </div>
+                            <div>
+                                <i class="fas fa-globe"></i> Global Vision
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  <script src="https://kit.fontawesome.com/15e3e040a7.js" crossorigin="anonymous"></script>
+    <!-- Skills Section / Tech Arsenal -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">TECH ARSENAL</h2>
+            
+            <div class="skill-category">
+                <h3>CORE SYSTEMS</h3>
+                <div class="skill-grid">
+                    <div class="skill-item">
+                        <i class="fab fa-flutter" style="color: #42A5F5;"></i>
+                        <div class="skill-name">FLUTTER</div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-dart" style="color: #0175C2;"></i>
+                        <div class="skill-name">DART</div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-python" style="color: #FFD43B;"></i>
+                        <div class="skill-name">PYTHON</div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-brain" style="color: var(--secondary);"></i>
+                        <div class="skill-name">GEN AI</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>WEB TECHNOLOGIES</h3>
+                <div class="skill-grid">
+                    <div class="skill-item">
+                        <i class="fab fa-html5" style="color: #E34F26;"></i>
+                        <div class="skill-name">HTML5</div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-css3-alt" style="color: #1572B6;"></i>
+                        <div class="skill-name">CSS3</div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-js" style="color: #F7DF1E;"></i>
+                        <div class="skill-name">JAVASCRIPT</div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-react" style="color: #61DAFB;"></i>
+                        <div class="skill-name">REACT</div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-server" style="color: #009688;"></i>
+                        <div class="skill-name">DJANGO/FASTAPI</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience / Mission Logs -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">MISSION LOGS</h2>
+            <div class="project-grid">
+                
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-inner">
+                        <div class="project-title">Nexstay Grand Chaliyar</div>
+                        <div class="project-tags">
+                            <span class="tag">Flutter</span>
+                            <span class="tag">App Dev</span>
+                            <span class="tag">2023</span>
+                        </div>
+                        <p class="project-desc">
+                            Designed and developed the digital experience for Nexstay Grand Chaliyar, optimizing guest engagement and service delivery.
+                        </p>
+                        <a href="https://www.nexstay.co/" target="_blank" class="btn-cyber" style="padding: 8px 20px; font-size: 0.8rem;">ACCESS DATA</a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-inner">
+                        <div class="project-title">Nexstay Lakkidi Village</div>
+                        <div class="project-tags">
+                            <span class="tag">Flutter</span>
+                            <span class="tag">Tourism</span>
+                            <span class="tag">2024</span>
+                        </div>
+                        <p class="project-desc">
+                            Built the official application for Lakkidi Village to enhance tourism experience and booking management.
+                        </p>
+                        <a href="https://www.nexstay.co/" target="_blank" class="btn-cyber" style="padding: 8px 20px; font-size: 0.8rem;">ACCESS DATA</a>
+                    </div>
+                </div>
+
+                <!-- Vision Card (Placeholder for future projects) -->
+                <div class="project-card">
+                    <div class="project-inner">
+                        <div class="project-title neon-text-secondary">AI Healthcare System</div>
+                        <div class="project-tags">
+                            <span class="tag" style="border-color: var(--secondary); color: var(--secondary);">IN PROGRESS</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">AI</span>
+                        </div>
+                        <p class="project-desc">
+                            Researching and developing intelligent systems for healthcare diagnostics and community well-being.
+                        </p>
+                        <div class="btn-cyber" style="border-color: var(--text-muted); color: var(--text-muted); cursor: default;">CLASSIFIED</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section id="vision" class="bg-light" style="background: transparent; padding: 100px 0;">
+        <div class="container">
+            <h2 class="section-title">FUTURE VISION</h2>
+            <div class="row" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+                
+                <!-- Card 1 -->
+                <div style="flex: 1 1 300px; max-width: 350px;">
+                    <div class="glass-panel" style="padding: 20px; height: 100%; text-align: center;">
+                        <img src="AI.jpg" alt="AI" style="width: 100%; border-radius: 8px; margin-bottom: 20px; opacity: 0.8;">
+                        <h3 style="font-size: 1.2rem; color: var(--primary);">AI REVOLUTION</h3>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);">Embracing the future of artificial intelligence to automate and improve daily life.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div style="flex: 1 1 300px; max-width: 350px;">
+                    <div class="glass-panel" style="padding: 20px; height: 100%; text-align: center;">
+                        <img src="FUTUER OF HUMANITY.jpg" alt="Future" style="width: 100%; border-radius: 8px; margin-bottom: 20px; opacity: 0.8;">
+                        <h3 style="font-size: 1.2rem; color: var(--secondary);">HUMANITY + TECH</h3>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);">Boundless potential where technology serves as the bridge to a better society.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div style="flex: 1 1 300px; max-width: 350px;">
+                    <div class="glass-panel" style="padding: 20px; height: 100%; text-align: center;">
+                        <img src="HUMANITARIAN.jpg" alt="Social Impact" style="width: 100%; border-radius: 8px; margin-bottom: 20px; opacity: 0.8;">
+                        <h3 style="font-size: 1.2rem; color: #ffe600;">SOCIAL IMPACT</h3>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);">Open source solutions aimed at uplifting communities and transforming lives.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section / Comms Link -->
+    <section id="contact" class="contact">
+        <div class="container contact-content">
+            <h2 class="section-title">ESTABLISH UPLINK</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 30px;">
+                Ready to build the future? Let's collaborate on your next big idea.
+            </p>
+            <div class="glass-panel" style="padding: 30px; display: inline-block;">
+                <p style="font-family: var(--font-code); color: var(--primary); font-size: 1.2rem;">
+                    sajad@example.com <span style="color: var(--text-muted); font-size: 0.8rem;">(Replace with actual email)</span>
+                </p>
+            </div>
+            
+            <div class="socials">
+                <a href="https://www.linkedin.com/in/sajad-yoosuf-a82616319/" target="_blank" class="social-btn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/SajadYoosuf" target="_blank" class="social-btn">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="social-btn">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 SAJAD YOOSUF | SYSTEM VERSION 2.0</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
