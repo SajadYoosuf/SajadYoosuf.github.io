@@ -1,0 +1,21 @@
+---
+// src/components/Footer.astro
+import { personalInfo } from '../data/portfolioData';
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-surface border-t border-border-faint py-10 relative z-10">
+  <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-semibold tracking-wider text-text-secondary uppercase">
+    <div>
+      &copy; {currentYear} {personalInfo.name} <span class="text-border-faint mx-1.5">·</span> SYSTEM v3.0
+    </div>
+    <div class="flex items-center gap-1">
+      <span>Built with</span>
+      <a href="https://astro.build" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors">Astro</a>
+      <span>+</span>
+      <a href="https://react.dev" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors">React</a>
+      <span>+</span>
+      <a href="https://tailwindcss.com" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors">Tailwind CSS v4</a>
+    </div>
+  </div>
+</footer>

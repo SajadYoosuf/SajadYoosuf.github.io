@@ -1,0 +1,79 @@
+---
+// src/layouts/BaseLayout.astro
+import '../styles/global.css';
+import { personalInfo } from '../data/portfolioData';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { 
+  title = `${personalInfo.name} | ${personalInfo.role}`, 
+  description = personalInfo.subHeadline 
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sajadyoosuf.github.io/" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="https://sajadyoosuf.github.io/gdg.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://sajadyoosuf.github.io/" />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content="https://sajadyoosuf.github.io/gdg.jpg" />
+
+    <!-- Fonts Preload & Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Elegant Heading Font (Instrument Serif) & Clean Readable Body Font (Geist) -->
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    
+    <!-- Structured Data (JSON-LD) for SEO -->
+    <script type="application/ld+json" is:inline define:vars={{ personalInfo }}>
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Sajad Yoosuf",
+        "jobTitle": "Full-Stack Product Engineer",
+        "url": "https://sajadyoosuf.github.io",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Kozhikode",
+          "addressRegion": "Kerala",
+          "addressCountry": "India"
+        },
+        "sameAs": [
+          "https://github.com/SajadYoosuf",
+          "https://www.linkedin.com/in/sajad-yoosuf-a82616319/"
+        ]
+      }
+    </script>
+  </head>
+  <body class="bg-primary text-primary antialiased selection:bg-accent/15 selection:text-accent min-h-screen flex flex-col">
+    <!-- Faint background grid for Notion/Stripe texture -->
+    <div class="fixed inset-0 grid-bg opacity-40 pointer-events-none z-0"></div>
+    
+    <div class="relative z-10 flex flex-col min-h-screen">
+      <slot />
+    </div>
+  </body>
+</html>

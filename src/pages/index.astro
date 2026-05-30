@@ -1,0 +1,94 @@
+---
+// src/pages/index.astro
+import BaseLayout from '../layouts/BaseLayout.astro';
+import NavBar from '../components/NavBar';
+import Hero from '../components/Hero.astro';
+import ProjectCard from '../components/ProjectCard';
+import SkillsMatrix from '../components/SkillsMatrix.astro';
+import ProcessTimeline from '../components/ProcessTimeline';
+import About from '../components/About.astro';
+import Contact from '../components/Contact';
+import Footer from '../components/Footer.astro';
+import { projects, valueProps } from '../data/portfolioData';
+import { Lightbulb, Cpu, Award } from 'lucide-react';
+
+const iconMap = {
+  lightbulb: Lightbulb,
+  cpu: Cpu,
+  award: Award
+};
+---
+
+<BaseLayout>
+  {/* Hydrate NavBar immediately on load for fast responsive access */}
+  <NavBar client:load />
+
+  <main class="grow">
+    {/* Hero positioning */}
+    <Hero />
+
+    {/* Section 1.3: What I Do (Value Propositions) */}
+    <section class="py-24 border-t border-border-faint bg-surface relative z-10">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {valueProps.map((item) => {
+            const IconComponent = iconMap[item.iconName] || Lightbulb;
+            return (
+              <div class="group border border-border-faint hover:border-neutral-300 hover:-translate-y-1 hover:shadow-xs rounded-xl p-6 md:p-8 transition-all duration-300 bg-surface">
+                <div class="p-3 rounded-lg bg-neutral-50 text-text-secondary group-hover:bg-accent/5 group-hover:text-accent transition-colors duration-300 w-fit mb-6">
+                  <IconComponent className="w-5.5 h-5.5" />
+                </div>
+                <h3 class="text-lg font-bold text-text-primary tracking-tight mb-3">
+                  {item.title}
+                </h3>
+                <p class="text-sm md:text-base text-text-secondary leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    {/* Section 1.4: Selected Projects Case Studies */}
+    <section id="projects" class="py-24 border-t border-border-faint relative z-10">
+      <div class="max-w-6xl mx-auto px-6">
+        {/* Section Title */}
+        <div class="mb-16 space-y-3">
+          <span class="text-xs font-bold tracking-widest text-accent uppercase block">
+            SELECTED MISSIONS
+          </span>
+          <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-text-primary">
+            Featured Projects
+          </h2>
+          <p class="text-sm md:text-base text-text-secondary max-w-xl">
+            Real products built to solve actual business and user pain points. Handled from architecture to shipped code.
+          </p>
+        </div>
+
+        {/* Projects Responsive Grid (1 col on mobile, 2 col on tablet, 3 col on desktop) */}
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project) => (
+            <ProjectCard project={project} client:visible />
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* Section 1.5: Skills Matrix */}
+    <SkillsMatrix />
+
+    {/* Section 1.6: How I Work (Process) */}
+    <ProcessTimeline client:visible />
+
+    {/* Section 1.7: About / Human Profile */}
+    <About />
+
+    {/* Section 1.8: Contact CTA Comms */}
+    <Contact client:visible />
+  </main>
+
+  {/* Footer details */}
+  <Footer />
+</BaseLayout>
