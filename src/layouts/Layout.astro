@@ -1,0 +1,395 @@
+---
+export interface Props {
+  title?: string;
+}
+
+const { title = "Sajad Yoosuf — Product Engineer" } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{title}</title>
+<meta name="description" content="Sajad Yoosuf is a product engineer in Calicut, India. He turns user problems into production software — mobile, web, and AI — from idea to launch." />
+<meta property="og:title" content="Sajad Yoosuf — Product Engineer" />
+<meta property="og:description" content="Software engineer who thinks like a product owner. Flutter, FastAPI, React, and applied AI — shipped to production." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://sajadyoosuf.github.io/" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style is:global>
+:root{
+  --paper:#F6F5F1;
+  --card:#FFFFFF;
+  --ink:#141715;
+  --ink-soft:#555E59;
+  --ink-faint:#8A928D;
+  --line:#DFDED7;
+  --line-strong:#C9C8BF;
+  --accent:#0D6E5F;
+  --accent-deep:#0A554A;
+  --accent-tint:#E4F0ED;
+  --signal:#E8A33D;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --display:'Bricolage Grotesque',sans-serif;
+  --body:'Figtree',system-ui,sans-serif;
+  --radius:14px;
+  --maxw:1120px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+body{
+  font-family:var(--body);
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.6;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit}
+::selection{background:var(--accent);color:#fff}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.mono{font-family:var(--mono)}
+h1,h2,h3{font-family:var(--display);line-height:1.08;letter-spacing:-0.01em}
+
+/* ---------- eyebrow labels ---------- */
+.eyebrow{
+  font-family:var(--mono);font-size:12px;font-weight:500;
+  text-transform:uppercase;letter-spacing:.14em;color:var(--accent);
+  display:flex;align-items:center;gap:10px;
+}
+.eyebrow::before{content:"";width:22px;height:1px;background:var(--accent)}
+
+/* ---------- nav ---------- */
+nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(246,245,241,.85);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-family:var(--display);font-weight:700;font-size:17px;text-decoration:none;display:flex;align-items:center;gap:9px}
+.brand-dot{width:9px;height:9px;border-radius:50%;background:var(--accent)}
+.nav-links{display:flex;gap:26px;align-items:center;list-style:none}
+.nav-links a{text-decoration:none;font-size:14px;font-weight:500;color:var(--ink-soft)}
+.nav-links a:hover{color:var(--ink)}
+.nav-cta{
+  font-size:13.5px;font-weight:600;text-decoration:none;
+  background:var(--ink);color:#fff!important;
+  padding:8px 16px;border-radius:100px;
+}
+.nav-cta:hover{background:var(--accent-deep)}
+@media(max-width:760px){.nav-links li.hide-m{display:none}}
+
+/* ---------- hero ---------- */
+.hero{padding:88px 0 56px;border-bottom:1px solid var(--line)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(280px,1fr);gap:56px;align-items:start}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}}
+.hero h1{
+  font-size:clamp(40px,5.6vw,64px);font-weight:700;margin:22px 0 20px;
+}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero .lede{font-size:18px;color:var(--ink-soft);max-width:56ch;margin-bottom:30px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;text-decoration:none;
+  font-weight:600;font-size:15px;border-radius:100px;padding:12px 24px;
+  transition:transform .15s ease,background .15s ease;
+}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-deep)}
+.btn-ghost{border:1px solid var(--line-strong);color:var(--ink);background:transparent}
+.btn-ghost:hover{border-color:var(--ink)}
+
+/* live status card */
+.status-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px;box-shadow:0 1px 2px rgba(20,23,21,.04);
+}
+.status-head{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.status-head img{width:52px;height:52px;border-radius:50%;border:1px solid var(--line)}
+.status-name{font-weight:700;font-size:15px;line-height:1.2}
+.status-sub{font-family:var(--mono);font-size:12px;color:var(--ink-faint)}
+.live-chip{
+  display:inline-flex;align-items:center;gap:7px;margin-left:auto;
+  font-family:var(--mono);font-size:11px;color:var(--accent-deep);
+  background:var(--accent-tint);padding:4px 10px;border-radius:100px;
+}
+.live-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.stat-row{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.stat-cell{background:var(--card);padding:14px 16px}
+.stat-num{font-family:var(--display);font-size:26px;font-weight:700;line-height:1.1}
+.stat-label{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-faint);margin-top:3px}
+.pulse-block{margin-top:18px}
+.pulse-label{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;color:var(--ink-faint);margin-bottom:8px;text-transform:uppercase;letter-spacing:.08em}
+.pulse-strip{display:flex;align-items:flex-end;gap:3px;height:44px}
+.pulse-bar{flex:1;background:var(--accent);border-radius:2px 2px 0 0;min-height:3px;opacity:.9;transition:height .5s ease}
+.pulse-bar.empty{background:var(--line)}
+
+/* ---------- section scaffolding ---------- */
+section{padding:80px 0;border-bottom:1px solid var(--line)}
+.sec-head{margin-bottom:44px;max-width:62ch}
+.sec-head h2{font-size:clamp(28px,3.6vw,40px);font-weight:700;margin:16px 0 12px}
+.sec-head p{color:var(--ink-soft);font-size:16.5px}
+
+/* ---------- principles ---------- */
+.principles{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+@media(max-width:960px){.principles{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.principles{grid-template-columns:1fr}}
+.principle{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px;transition:border-color .2s ease;
+}
+.principle:hover{border-color:var(--accent)}
+.principle .k{font-family:var(--mono);font-size:11px;color:var(--accent);letter-spacing:.12em;text-transform:uppercase}
+.principle h3{font-size:18px;margin:12px 0 8px}
+.principle p{font-size:14.5px;color:var(--ink-soft)}
+
+/* ---------- case studies ---------- */
+.case{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:36px;margin-bottom:24px;
+  display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1.6fr);gap:40px;
+}
+@media(max-width:880px){.case{grid-template-columns:1fr;gap:24px;padding:26px}}
+.case-meta .tagline{font-family:var(--mono);font-size:12px;color:var(--ink-faint);letter-spacing:.06em;margin-bottom:10px;display:block}
+.case-meta h3{font-size:24px;margin-bottom:12px}
+.case-meta .role{color:var(--ink-soft);font-size:15px;margin-bottom:18px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.tag{
+  font-family:var(--mono);font-size:11.5px;color:var(--accent-deep);
+  background:var(--accent-tint);border-radius:6px;padding:4px 9px;
+}
+.case-link{font-weight:600;font-size:14px;color:var(--accent-deep);text-decoration:none;border-bottom:1px solid var(--accent-deep)}
+.case-link:hover{color:var(--accent)}
+.case-body dl{display:grid;gap:16px}
+.case-body dt{
+  font-family:var(--mono);font-size:11px;text-transform:uppercase;
+  letter-spacing:.12em;color:var(--ink-faint);margin-bottom:4px;
+}
+.case-body dd{font-size:15px;color:var(--ink-soft)}
+.case-body dd strong{color:var(--ink)}
+
+/* ---------- github live ---------- */
+.gh-section{background:#101413;color:#EDEFEA;border-bottom:none}
+.gh-section .eyebrow{color:#5FD3B8}
+.gh-section .eyebrow::before{background:#5FD3B8}
+.gh-section .sec-head p{color:#A6AFA9}
+.gh-note{font-family:var(--mono);font-size:12px;color:#6E7A73;margin-top:-28px;margin-bottom:36px}
+.gh-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:40px}
+@media(max-width:900px){.gh-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.gh-grid{grid-template-columns:1fr}}
+.repo{
+  background:#171C1A;border:1px solid #262D2A;border-radius:var(--radius);
+  padding:20px;display:flex;flex-direction:column;gap:10px;text-decoration:none;
+  transition:border-color .2s ease,transform .15s ease;
+}
+.repo:hover{border-color:#5FD3B8;transform:translateY(-2px)}
+.repo-name{font-family:var(--mono);font-weight:600;font-size:14px;color:#5FD3B8;word-break:break-word}
+.repo-desc{font-size:13.5px;color:#A6AFA9;flex:1;min-height:38px}
+.repo-foot{display:flex;gap:14px;font-family:var(--mono);font-size:11.5px;color:#6E7A73;align-items:center}
+.lang-dot{width:8px;height:8px;border-radius:50%;display:inline-block;margin-right:5px;vertical-align:-1px}
+.gh-cols{display:grid;grid-template-columns:1.4fr 1fr;gap:40px}
+@media(max-width:880px){.gh-cols{grid-template-columns:1fr}}
+.gh-sub{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:#6E7A73;margin-bottom:16px}
+.lang-bar{display:flex;height:12px;border-radius:100px;overflow:hidden;margin-bottom:16px;background:#262D2A}
+.lang-seg{height:100%}
+.lang-legend{display:flex;flex-wrap:wrap;gap:14px;font-family:var(--mono);font-size:12px;color:#A6AFA9}
+.feed{list-style:none;display:grid;gap:0}
+.feed li{
+  display:flex;gap:14px;padding:11px 0;border-bottom:1px solid #232927;
+  font-size:13.5px;color:#C4CBC5;
+}
+.feed .t{font-family:var(--mono);font-size:11.5px;color:#6E7A73;white-space:nowrap;padding-top:2px}
+.feed b{color:#5FD3B8;font-weight:600}
+.skeleton{color:#4A554F;font-family:var(--mono);font-size:13px}
+
+/* ---------- experience ---------- */
+.xp{display:grid;gap:0}
+.xp-item{
+  display:grid;grid-template-columns:180px 1fr;gap:28px;
+  padding:26px 0;border-bottom:1px solid var(--line);
+}
+@media(max-width:680px){.xp-item{grid-template-columns:1fr;gap:6px}}
+.xp-when{font-family:var(--mono);font-size:12.5px;color:var(--ink-faint);padding-top:4px}
+.xp-item h3{font-size:19px;margin-bottom:4px}
+.xp-item .org{font-size:14px;color:var(--accent-deep);font-weight:600;margin-bottom:8px}
+.xp-item p{font-size:15px;color:var(--ink-soft);max-width:64ch}
+
+/* ---------- stack ---------- */
+.stack-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:860px){.stack-grid{grid-template-columns:1fr}}
+.stack-col{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.stack-col h3{font-size:15px;font-family:var(--mono);font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:14px}
+.chip-row{display:flex;flex-wrap:wrap;gap:8px}
+.chip{
+  font-size:13.5px;font-weight:500;color:var(--ink);
+  border:1px solid var(--line-strong);border-radius:100px;padding:6px 13px;background:var(--paper);
+}
+
+/* ---------- contact ---------- */
+.contact{border-bottom:none;text-align:left;padding-bottom:60px}
+.contact h2{font-size:clamp(32px,4.4vw,52px);font-weight:700;margin:16px 0 18px;max-width:22ch}
+.contact p{color:var(--ink-soft);max-width:54ch;margin-bottom:30px;font-size:17px}
+footer{border-top:1px solid var(--line);padding:26px 0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+footer,.foot-links a{font-family:var(--mono);font-size:12px;color:var(--ink-faint)}
+.foot-links{display:flex;gap:20px}
+.foot-links a{text-decoration:none}
+.foot-links a:hover{color:var(--ink)}
+
+/* reveal on scroll */
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+</style>
+</head>
+<body>
+  <slot />
+
+<script is:inline>
+(function(){
+  "use strict";
+  var USER = "SajadYoosuf";
+  var API = "https://api.github.com";
+
+  /* ---------- scroll reveal ---------- */
+  var els = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target);} });
+    },{threshold:.12});
+    els.forEach(function(el){ io.observe(el); });
+  } else { els.forEach(function(el){ el.classList.add("in"); }); }
+
+  /* ---------- helpers ---------- */
+  function $(id){ return document.getElementById(id); }
+  function esc(s){ var d=document.createElement("div"); d.textContent=s||""; return d.innerHTML; }
+  function timeAgo(iso){
+    var s = (Date.now() - new Date(iso).getTime())/1000;
+    if(s<3600) return Math.max(1,Math.round(s/60))+"m ago";
+    if(s<86400) return Math.round(s/3600)+"h ago";
+    if(s<86400*30) return Math.round(s/86400)+"d ago";
+    return Math.round(s/(86400*30))+"mo ago";
+  }
+  var LANG_COLORS = {
+    Dart:"#00B4AB", Python:"#3572A5", JavaScript:"#F1E05A", TypeScript:"#3178C6",
+    HTML:"#E34C26", CSS:"#563D7C", Java:"#B07219", C:"#555555", "C++":"#F34B7D",
+    Kotlin:"#A97BFF", Swift:"#F05138", Shell:"#89E051", "Jupyter Notebook":"#DA5B0B",
+    Other:"#8A928D"
+  };
+  function langColor(l){ return LANG_COLORS[l] || LANG_COLORS.Other; }
+
+  /* ---------- fetch profile ---------- */
+  if($("s-repos")) {
+    fetch(API+"/users/"+USER).then(function(r){ if(!r.ok) throw 0; return r.json(); }).then(function(u){
+      $("s-repos").textContent = u.public_repos;
+      $("s-followers").textContent = u.followers;
+      if(u.avatar_url) $("gh-avatar").src = u.avatar_url;
+    }).catch(function(){});
+
+    /* ---------- fetch repos ---------- */
+    fetch(API+"/users/"+USER+"/repos?per_page=100&sort=pushed").then(function(r){
+      if(!r.ok) throw new Error("rate-limited");
+      return r.json();
+    }).then(function(repos){
+      $("gh-status").textContent = "// connected · " + repos.length + " public repositories synced " + new Date().toLocaleTimeString();
+
+      /* stars + languages */
+      var stars = 0, langCount = {}, langSet = {};
+      repos.forEach(function(r){
+        stars += r.stargazers_count;
+        if(r.language){ langSet[r.language]=1; langCount[r.language]=(langCount[r.language]||0)+1; }
+      });
+      $("s-stars").textContent = stars;
+      $("s-langs").textContent = Object.keys(langSet).length;
+
+      /* last push */
+      var own = repos.filter(function(r){ return !r.fork; });
+      var newest = (own[0]||repos[0]);
+      if(newest) $("gh-lastpush").textContent = "last push " + timeAgo(newest.pushed_at);
+
+      /* repo grid: top 6 recently pushed, non-fork, with sensible fallback */
+      var picks = own.slice(0,6);
+      if(picks.length < 6) picks = picks.concat(repos.filter(function(r){return r.fork;}).slice(0, 6-picks.length));
+      $("repo-grid").innerHTML = picks.map(function(r){
+        return '<a class="repo" href="'+esc(r.html_url)+'" target="_blank" rel="noopener">'
+          + '<span class="repo-name">'+esc(r.name)+'</span>'
+          + '<span class="repo-desc">'+esc(r.description || "No description yet — code speaks for itself.")+'</span>'
+          + '<span class="repo-foot">'
+          + (r.language ? '<span><span class="lang-dot" style="background:'+langColor(r.language)+'"></span>'+esc(r.language)+'</span>' : '')
+          + '<span>★ '+r.stargazers_count+'</span>'
+          + '<span>updated '+timeAgo(r.pushed_at)+'</span>'
+          + '</span></a>';
+      }).join("");
+
+      /* language bar */
+      var entries = Object.keys(langCount).map(function(k){ return [k, langCount[k]]; })
+        .sort(function(a,b){ return b[1]-a[1]; });
+      var top = entries.slice(0,5);
+      var rest = entries.slice(5).reduce(function(a,e){ return a+e[1]; },0);
+      if(rest>0) top.push(["Other", rest]);
+      var total = top.reduce(function(a,e){ return a+e[1]; },0) || 1;
+      $("lang-bar").innerHTML = top.map(function(e){
+        return '<div class="lang-seg" style="width:'+(e[1]/total*100)+'%;background:'+langColor(e[0])+'" title="'+esc(e[0])+'"></div>';
+      }).join("");
+      $("lang-legend").innerHTML = top.map(function(e){
+        return '<span><span class="lang-dot" style="background:'+langColor(e[0])+'"></span>'+esc(e[0])+' '+Math.round(e[1]/total*100)+'%</span>';
+      }).join("");
+    }).catch(function(){
+      $("gh-status").textContent = "// GitHub API rate limit reached — showing profile at github.com/"+USER;
+      $("repo-grid").innerHTML = '<a class="repo" href="https://github.com/'+USER+'?tab=repositories" target="_blank" rel="noopener"><span class="repo-name">View all repositories ↗</span><span class="repo-desc">Live data is temporarily unavailable. Browse 77+ repositories directly on GitHub.</span></a>';
+      $("lang-legend").innerHTML = '<span>Dart · Python · JavaScript · TypeScript · HTML</span>';
+    });
+
+    /* ---------- fetch events: activity feed + push pulse ---------- */
+    fetch(API+"/users/"+USER+"/events/public?per_page=100").then(function(r){
+      if(!r.ok) throw 0; return r.json();
+    }).then(function(evts){
+      /* feed */
+      var labels = {
+        PushEvent: function(e){ var n=(e.payload.commits||[]).length||1; return "pushed "+n+" commit"+(n>1?"s":"")+" to <b>"+esc(e.repo.name.split("/")[1])+"</b>"; },
+        CreateEvent: function(e){ return "created "+esc(e.payload.ref_type)+" in <b>"+esc(e.repo.name.split("/")[1])+"</b>"; },
+        PullRequestEvent: function(e){ return esc(e.payload.action)+" a pull request in <b>"+esc(e.repo.name.split("/")[1])+"</b>"; },
+        IssuesEvent: function(e){ return esc(e.payload.action)+" an issue in <b>"+esc(e.repo.name.split("/")[1])+"</b>"; },
+        WatchEvent: function(e){ return "starred <b>"+esc(e.repo.name)+"</b>"; },
+        ForkEvent: function(e){ return "forked <b>"+esc(e.repo.name)+"</b>"; },
+        ReleaseEvent: function(e){ return "published a release in <b>"+esc(e.repo.name.split("/")[1])+"</b>"; }
+      };
+      var items = evts.filter(function(e){ return labels[e.type]; }).slice(0,7);
+      if(items.length){
+        $("feed").innerHTML = items.map(function(e){
+          return "<li><span class='t'>"+timeAgo(e.created_at)+"</span><span>"+labels[e.type](e)+"</span></li>";
+        }).join("");
+      } else {
+        $("feed").innerHTML = "<li class='skeleton'>quiet on the public feed — the private repos are busy.</li>";
+      }
+
+      /* pulse: pushes per day over last 8 weeks (56 days) */
+      var days = 56, counts = new Array(days).fill(0), now = Date.now();
+      evts.forEach(function(e){
+        if(e.type!=="PushEvent") return;
+        var d = Math.floor((now - new Date(e.created_at).getTime())/86400000);
+        if(d>=0 && d<days) counts[days-1-d] += (e.payload.commits||[]).length || 1;
+      });
+      var max = Math.max.apply(null, counts.concat([1]));
+      $("pulse").innerHTML = counts.map(function(c){
+        var h = c===0 ? 3 : Math.max(6, Math.round(c/max*44));
+        return '<div class="pulse-bar'+(c===0?' empty':'')+'" style="height:'+h+'px" title="'+c+' commits"></div>';
+      }).join("");
+      $("pulse-range").textContent = "last 8 weeks";
+    }).catch(function(){
+      $("feed").innerHTML = "<li class='skeleton'>activity feed unavailable right now.</li>";
+      $("pulse").innerHTML = '<div class="pulse-bar empty" style="height:3px;flex:1"></div>';
+    });
+  }
+})();
+</script>
+</body>
+</html>

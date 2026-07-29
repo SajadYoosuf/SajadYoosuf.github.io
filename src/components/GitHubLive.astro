@@ -1,0 +1,29 @@
+---
+// src/components/GitHubLive.astro
+---
+<section class="gh-section" id="github">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Live from GitHub</span>
+      <h2 style="color:#EDEFEA">The build log doesn't lie</h2>
+      <p>Everything below is fetched live from the GitHub API when you load this page — latest repositories, real language distribution, and recent activity.</p>
+    </div>
+    <p class="gh-note" id="gh-status">// connecting to api.github.com …</p>
+
+    <div class="gh-grid" id="repo-grid">
+      <div class="skeleton">loading repositories…</div>
+    </div>
+
+    <div class="gh-cols">
+      <div class="reveal">
+        <div class="gh-sub">Language distribution — computed from all public repos</div>
+        <div class="lang-bar" id="lang-bar"></div>
+        <div class="lang-legend" id="lang-legend"><span class="skeleton">loading…</span></div>
+      </div>
+      <div class="reveal">
+        <div class="gh-sub">Recent activity</div>
+        <ul class="feed" id="feed"><li class="skeleton">loading events…</li></ul>
+      </div>
+    </div>
+  </div>
+</section>

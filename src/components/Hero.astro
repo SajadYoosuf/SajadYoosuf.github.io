@@ -1,64 +1,42 @@
 ---
 // src/components/Hero.astro
-import { ArrowRight, MapPin } from 'lucide-react';
-import { personalInfo } from '../data/portfolioData';
 ---
-
-<section class="min-h-screen flex flex-col justify-center pt-24 pb-12 overflow-hidden relative">
-  {/* Absolute decorative ambient glow (subtle, light gray/blue, no heavy graphics) */}
-  <div class="absolute top-[20%] left-1/2 -translate-x-1/2 w-[80vw] h-[35vh] bg-accent/2 rounded-full blur-[120px] pointer-events-none z-0"></div>
-
-  <div class="max-w-4xl mx-auto px-6 relative z-10 w-full flex flex-col justify-between min-h-[70vh]">
-    <div class="my-auto space-y-8">
-      {/* Location Badge */}
-      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface border border-border-faint shadow-3xs hover:border-neutral-300 transition-all duration-300 w-fit">
-        <span class="relative flex h-2 w-2">
-          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
-          <span class="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
-        </span>
-        <span class="text-xs font-semibold tracking-wide text-text-primary uppercase flex items-center gap-1">
-          {personalInfo.name} <span class="text-text-secondary font-normal">·</span> 
-          <span class="text-text-secondary flex items-center gap-0.5">
-            <MapPin className="w-3 h-3 inline text-text-secondary" /> {personalInfo.location}
-          </span>
-        </span>
-      </div>
-
-      {/* Main Positioning Headline */}
-      <h1 class="text-5xl md:text-7xl font-light tracking-tight leading-[1.05] text-text-primary text-balance">
-        I build <span class="font-serif italic text-accent font-medium shimmer-text">products that work</span> <br class="hidden sm:inline" />
-        — end to end.
-      </h1>
-
-      {/* Narrative Bio */}
-      <p class="text-lg md:text-xl font-normal leading-relaxed text-text-secondary max-w-2xl text-balance">
-        {personalInfo.subHeadline}
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Product Engineer · Calicut, India</span>
+      <h1>I turn user problems into <em>production software.</em></h1>
+      <p class="lede">
+        Software Product Engineer at <strong>Ogera Ventures Pvt. Ltd.</strong>, where I build
+        the products the business runs on — an in-house sales management system (CRM) and an
+        AI chatbot for customer communication. I own products end-to-end: understanding the
+        user, designing the system, shipping to production, and measuring what happened next.
       </p>
-
-      {/* Dual Calls to Action */}
-      <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
-        <a 
-          href="#projects" 
-          class="flex items-center justify-center gap-2 px-6 py-3.5 rounded-md bg-accent text-surface text-sm font-semibold hover:bg-accent-hover transition-all duration-200 shadow-sm cursor-pointer"
-        >
-          View My Work
-          <ArrowRight className="w-4 h-4" />
-        </a>
-        <a 
-          href="#contact" 
-          class="flex items-center justify-center gap-2 px-6 py-3.5 rounded-md bg-surface text-text-primary border border-border-faint text-sm font-semibold hover:bg-neutral-50 hover:border-neutral-300 transition-all duration-200 cursor-pointer shadow-3xs"
-        >
-          Get in Touch
-        </a>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#work">See the work</a>
+        <a class="btn btn-ghost" href="https://github.com/SajadYoosuf" target="_blank" rel="noopener">GitHub ↗</a>
       </div>
     </div>
 
-    {/* Elegant transition marker */}
-    <div class="w-full pt-16 flex items-center gap-4 pointer-events-none select-none">
-      <span class="text-[10px] uppercase font-bold tracking-widest text-text-secondary whitespace-nowrap">
-        selected work &darr;
-      </span>
-      <div class="h-[1px] bg-border-faint w-full"></div>
-    </div>
+    <aside class="status-card" aria-label="Live GitHub status">
+      <div class="status-head">
+        <img id="gh-avatar" src="https://avatars.githubusercontent.com/u/174928297?v=4" alt="Sajad Yoosuf" />
+        <div>
+          <div class="status-name">@SajadYoosuf</div>
+          <div class="status-sub" id="gh-lastpush">syncing…</div>
+        </div>
+        <span class="live-chip"><span class="live-dot"></span>LIVE</span>
+      </div>
+      <div class="stat-row">
+        <div class="stat-cell"><div class="stat-num" id="s-repos">77</div><div class="stat-label">Repositories</div></div>
+        <div class="stat-cell"><div class="stat-num" id="s-langs">6+</div><div class="stat-label">Languages</div></div>
+        <div class="stat-cell"><div class="stat-num" id="s-stars">—</div><div class="stat-label">Stars earned</div></div>
+        <div class="stat-cell"><div class="stat-num" id="s-followers">10</div><div class="stat-label">Followers</div></div>
+      </div>
+      <div class="pulse-block">
+        <div class="pulse-label"><span>Push activity</span><span id="pulse-range">recent weeks</span></div>
+        <div class="pulse-strip" id="pulse" aria-label="Recent GitHub push activity"></div>
+      </div>
+    </aside>
   </div>
-</section>
+</header>

@@ -1,0 +1,102 @@
+---
+// src/components/Work.astro
+---
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Selected work</span>
+      <h2>Not just what I built — why, and what changed</h2>
+      <p>Each project below follows the full arc: the problem, the engineering decisions, and the outcome.</p>
+    </div>
+
+    <article class="case reveal">
+      <div class="case-meta">
+        <span class="tagline">BUSINESS SYSTEMS · AI · CURRENT ROLE</span>
+        <h3>Ogera Ventures — Sales &amp; Customer Platform</h3>
+        <p class="role">Software Product Engineer — building the in-house product suite the business operates on, from sales management to AI-driven customer communication.</p>
+        <div class="tags"><span class="tag">CRM</span><span class="tag">AI chatbot</span><span class="tag">FastAPI</span><span class="tag">React</span><span class="tag">Product ownership</span></div>
+      </div>
+      <div class="case-body">
+        <dl>
+          <div><dt>The problem</dt><dd>A growing business where sales context lived in people's heads and scattered threads — no single view of leads, follow-ups, and customer conversations, and no way to respond to customers at the speed they expect.</dd></div>
+          <div><dt>What I build</dt><dd>An in-house <strong>sales management system</strong> — CRM built around how this business actually sells, not a generic template — plus an <strong>AI chatbot for customer communication</strong>, and other internal products as the operation grows.</dd></div>
+          <div><dt>Engineering decisions</dt><dd>Internal products live or die on adoption, so every feature starts from the sales team's real workflow. The AI chatbot is designed as a component with honest limits: it handles routine customer communication and hands off cleanly to a human when it should — reliability over cleverness.</dd></div>
+          <div><dt>Impact</dt><dd>The company's daily sales and customer operations run on software I own end-to-end — the clearest possible test of whether an engineer can carry a product from business need to production dependency.</dd></div>
+        </dl>
+      </div>
+    </article>
+
+    <article class="case reveal">
+      <div class="case-meta">
+        <span class="tagline">CIVIC TECH · FULL STACK · DATA</span>
+        <h3>Kerala Election Comparison System</h3>
+        <p class="role">Sole builder — designed and shipped both the backend and frontend of a system comparing every Kerala assembly election, from the first to the latest.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">React</span><span class="tag">Data modeling</span><span class="tag">API design</span></div>
+        <a class="case-link" href="https://github.com/SajadYoosuf/election_comparison_system_backend" target="_blank" rel="noopener">Backend repo ↗</a>&nbsp;&nbsp;
+        <a class="case-link" href="https://github.com/SajadYoosuf/election_comparison_frontend" target="_blank" rel="noopener">Frontend repo ↗</a>
+      </div>
+      <div class="case-body">
+        <dl>
+          <div><dt>The problem</dt><dd>Decades of Kerala assembly election results exist as scattered records — nearly impossible for a citizen, journalist, or researcher to answer a simple question like "how did this constituency swing over 60 years?" without hours of manual digging.</dd></div>
+          <div><dt>What I built</dt><dd>A complete comparison platform: a backend that models the full history of Kerala assembly elections — parties, constituencies, candidates, results — behind a clean API, and a frontend that lets anyone compare any elections side by side.</dd></div>
+          <div><dt>Engineering decisions</dt><dd>Split the system into <strong>separate backend and frontend services</strong> so the election data API can serve other clients later; designed the schema around comparison as the core query pattern rather than as an afterthought — the hard part of historical data isn't storing it, it's making six decades of shifting parties and boundaries comparable at all.</dd></div>
+          <div><dt>Impact</dt><dd>Turned a fragmented historical record into a queryable product — and proved I can own a data-heavy system end-to-end: sourcing, modeling, API, and UI.</dd></div>
+        </dl>
+      </div>
+    </article>
+
+    <article class="case reveal">
+      <div class="case-meta">
+        <span class="tagline">FREELANCE · CLIENT DELIVERY · OPERATIONS</span>
+        <h3>Smart Akshaya</h3>
+        <p class="role">Freelance engineer — built an in-house operations system for an Akshaya e-governance service centre, from requirements to delivery.</p>
+        <div class="tags"><span class="tag">Full stack</span><span class="tag">Workflow design</span><span class="tag">Client delivery</span><span class="tag">Freelance</span></div>
+        <a class="case-link" href="https://github.com/SajadYoosuf/smart_akshaya" target="_blank" rel="noopener">View repo ↗</a>
+      </div>
+      <div class="case-body">
+        <dl>
+          <div><dt>The problem</dt><dd>Akshaya centres are the front line of citizen services in Kerala — handling a high daily volume of government applications, payments, and documents — yet the centre's internal operations ran on memory, paper, and improvisation.</dd></div>
+          <div><dt>What I built</dt><dd>An in-house operations system tailored to how the centre actually works: tracking services and applications through their lifecycle so staff always know what's pending, what's done, and what's owed.</dd></div>
+          <div><dt>Engineering decisions</dt><dd>As a freelance project, the real constraint was the users, not the tech: staff who live in the workflow, not in software. I sat with the actual daily process before designing anything, kept the interface ruthlessly simple, and built for reliability over features — a system a small centre can depend on without an IT team.</dd></div>
+          <div><dt>Impact</dt><dd>Delivered a working system to a paying client — the full freelance arc of scoping, building, and shipping software that a real business runs its day on.</dd></div>
+        </dl>
+      </div>
+    </article>
+
+    <article class="case reveal">
+      <div class="case-meta">
+        <span class="tagline">EDTECH · PLATFORM · PREVIOUS ROLE</span>
+        <h3>Novox Edtech &amp; Novox Core</h3>
+        <p class="role">Software engineer — built learning products and core platform infrastructure at a startup.</p>
+        <div class="tags"><span class="tag">FastAPI</span><span class="tag">React</span><span class="tag">Flutter</span><span class="tag">PostgreSQL</span><span class="tag">System design</span></div>
+        <a class="case-link" href="http://novoxedtechllp.com" target="_blank" rel="noopener">novoxedtechllp.com ↗</a>
+      </div>
+      <div class="case-body">
+        <dl>
+          <div><dt>The problem</dt><dd>Learners need more than content — they need products that adapt to how they actually study. Startups need infrastructure that ships fast without collapsing under growth.</dd></div>
+          <div><dt>What I built</dt><dd>Product features and platform services across the stack: FastAPI backends, React web surfaces, and Flutter mobile — working directly with product decisions, not just tickets.</dd></div>
+          <div><dt>Engineering decisions</dt><dd>Startup constraints demand ruthless prioritization: I biased toward boring, proven technology for the core and spent the innovation budget where users felt it. AI features shipped where they solved a real learning problem, not for the demo.</dd></div>
+          <div><dt>Impact</dt><dd>Owned features from spec to production in a small team — the fastest way to learn what end-to-end product ownership actually costs and returns.</dd></div>
+        </dl>
+      </div>
+    </article>
+
+    <article class="case reveal">
+      <div class="case-meta">
+        <span class="tagline">APPLIED AI · RESEARCH → PRODUCT · ONGOING</span>
+        <h3>AI for healthcare &amp; community</h3>
+        <p class="role">Independent R&amp;D — turning AI experiments into deployable tools for real-world impact.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Gen AI</span><span class="tag">LLM APIs</span><span class="tag">Prototyping</span></div>
+        <a class="case-link" href="https://github.com/SajadYoosuf" target="_blank" rel="noopener">Follow on GitHub ↗</a>
+      </div>
+      <div class="case-body">
+        <dl>
+          <div><dt>The problem</dt><dd>Healthcare and community services in India lose enormous value to information gaps — triage, diagnostics support, and access are all bottlenecked by scarce expertise.</dd></div>
+          <div><dt>What I'm building</dt><dd>Prototypes exploring intelligent diagnostics support and community-health tooling — with contributions to open-source health infrastructure like <strong>Care</strong> (a Digital Public Good for TeleICU administration).</dd></div>
+          <div><dt>Engineering decisions</dt><dd>Treat AI as a component, not the product: every experiment starts from a clinical or community workflow and asks where a model reduces friction. Reliability, fallbacks, and honest failure modes come before model cleverness.</dd></div>
+          <div><dt>Impact</dt><dd>A growing body of experiments and open-source contributions — the R&amp;D pipeline feeding my next production products.</dd></div>
+        </dl>
+      </div>
+    </article>
+  </div>
+</section>
